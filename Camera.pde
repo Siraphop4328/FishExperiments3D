@@ -25,9 +25,9 @@ class Camera
     yaw = 180;
     pitch = 2.4;
     velocityZ = 0;
-    gravity = 0.1;
-    jumpStrength = 5;
-    spd = 2;
+    gravity = 1.2;
+    jumpStrength = 20;
+    spd = 7;
     FLOOR_z = 30;
     TRAP_MOUSE = true;
   }
