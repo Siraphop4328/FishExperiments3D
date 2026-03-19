@@ -8,10 +8,11 @@ int FPS = 30;
 void setup() {
 
   size(1920, 1200, P3D);
+  noiseSeed(-1);
   frameRate(FPS);
   playerCamera = new Camera();
-  map1 = new Map(10, 10);
-  windowTitle("FishFind3D");
+  map1 = new Map(4000, 4000);
+  windowTitle("FoodChain3D");
   r = (GLWindow) surface.getNative();
   r.confinePointer(true);
   r.setPointerVisible(false);
@@ -26,11 +27,17 @@ void setup() {
 }
 
 void draw() {
+  background(128, 221, 255);
+
+  lights();
 
   playerCamera.handleCamera();
-  map1.changeSkyColor(playerCamera.camZ);
   map1.drawMap();
+  map1.drawWater();
+   
+
   camera();
+  perspective(PI/3.0, (float)width/height, 1, 100000);
   noLights();
   drawUI();
 }
