@@ -13,6 +13,13 @@ void keyPressed() {
     r.confinePointer(playerCamera.TRAP_MOUSE);
     r.setPointerVisible(!playerCamera.TRAP_MOUSE);
   }
+  if (key == 'r' || key == 'R') {
+    reloadWorld();
+  }
+  if (key == 'n' || key == 'N') {
+    currentSeed = floor(random(1000000));
+    
+  }
 }
 
 void keyReleased() {
