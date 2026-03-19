@@ -1,2 +1,1 @@
-# FishExperiments3D
-fish combonations simulator
+FoodChain3D
