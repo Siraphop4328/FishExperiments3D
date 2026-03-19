@@ -27,7 +27,7 @@ class Camera
     velocityZ = 0;
     gravity = 1.2;
     jumpStrength = 20;
-    spd = 5;
+    spd = 10;
     FLOOR_z = -100;
     TRAP_MOUSE = true;
   }
@@ -37,7 +37,7 @@ class Camera
   {
 
     float currentGround = map1.getGroundHeight(camX, camY);
-    float targetZ = currentGround + 75;
+    float targetZ = currentGround + 300;
     
     
     
@@ -45,7 +45,7 @@ class Camera
     velocityZ -= gravity;
     camZ += velocityZ;
     
-    if (camZ <= currentGround + 75) {
+    if (camZ <= currentGround + 300) {
       
       camZ = lerp(camZ, targetZ, 0.4);
       velocityZ = 0;
