@@ -46,14 +46,13 @@ class Map {
       endShape();
     }
   }
-
-  // Helper function to keep drawMap() clean
+ 
   void setBiomeColor(float h) {
     if (h < 135) {
       fill(100, 80, 60);    // DIRT
     } else if (h < 270) {
       fill(60, 150, 60);    // GRASS
-    } else if (h < 350) {
+    } else if (h < 400) {
       fill(100, 110, 100);  // ROCK
     } else {
       fill(255, 255, 255);  // SNOW
